@@ -1,0 +1,139 @@
+{
+    "intents": [{
+            "tag": "greeting",
+            "patterns": ["Hello", "Hi there", "Greetings", "Hey", "Namaste"],
+            "responses": [
+                "Ahoy, recruit! Welcome aboard. Let us tackle whatever comes your way!",
+                "Hey there, fighter! Ready to take on the day? I am here to back you up!",
+                "Salute! No storm is too strong when you've got the right crew. Let us navigate your thoughts!"
+            ]
+        },
+
+        {
+            "tag": "financial",
+            "patterns": ["How do I achieve financial stability?", "I need help managing my finances", "How do I grow my wealth?"],
+            "responses": [
+                "Financial success is all about smart planning! Set goals, budget wisely, and invest in your future!",
+                "Money flows where discipline goes. Cut unnecessary spending, save consistently, and take charge of your financial future!",
+                "Want financial freedom? Hustle hard, stay focused, and make every dollar work for you!"
+            ]
+        },
+        {
+            "tag": "money",
+            "patterns": ["How do I manage money?", "I struggle financially", "Money stresses me out"],
+            "responses": [
+                "Money is a tool-master it, do not let it master you! Plan, budget, and take control!",
+                "Make smart moves, think ahead, and hustle hard. Wealth is built with strategy!",
+                "Opportunities are everywhere stay sharp, invest wisely, and create your own fortune!"
+            ]
+        },
+        {
+            "tag": "career",
+            "patterns": ["I don’t know what to do with my career", "I feel stuck at work", "How do I find my dream job?"],
+            "responses": [
+                "Your career is YOUR battlefield plan your strategy, sharpen your skills, and make bold moves!",
+                "Stuck? Change tactics! Learn, adapt, and go after what you truly want!",
+                "Success is not given, it is earned! Take charge, hustle hard, and make your career work for you!"
+            ]
+        },
+        {
+            "tag": "anxiety",
+            "patterns": ["I feel anxious", "I'm overwhelmed", "I can't calm down"],
+            "responses": [
+                "Stand tall! Anxiety is just a wave-you ride it, you do not let it sink you. Take a deep breath, steady yourself, and push forward!",
+                "You have got this! Breathe in strength, breathe out doubt. Keep your head up and move one step at a time!",
+                "Fear is a test, not a wall. Face it, charge through it, and own your power!"
+            ]
+        },
+        {
+            "tag": "boyfriend",
+            "patterns": ["How do I handle problems with my boyfriend?", "My boyfriend doesn't understand me", "I'm struggling with my relationship"],
+            "responses": [
+                "Communication is your best weapon! Be honest, be direct, and never hold back from expressing your needs!",
+                "Every relationship needs teamwork step up, talk it out, and work towards a stronger bond!",
+                "Challenges make relationships stronger. Face them together and push through like a team!"
+            ]
+        },
+        {
+            "tag": "girlfriend",
+            "patterns": ["How do I improve my relationship with my girlfriend?", "I feel distant from my girlfriend", "She doesn’t understand me"],
+            "responses": [
+                "Be present, be open, and be honest! Relationships thrive when both partners step up and give their best!",
+                "Listen, communicate, and take action show her that she matters!",
+                "Love is not about avoiding problems it is about facing them together. Be strong, be supportive, and make it work!"
+            ]
+        },
+        {
+            "tag": "children",
+            "patterns": ["How do I handle my kids?", "Parenting is stressful", "My children don’t listen to me"],
+            "responses": [
+                "Parenting is the greatest adventure! Lead with strength, patience, and understanding you have got this!",
+                "Kids learn from what you DO, not just what you say. Be the example they need!",
+                "Discipline and love go hand in hand. Balance them wisely, and you all raise champions!"
+            ]
+        },
+        {
+            "tag": "home",
+            "patterns": ["I don’t feel at home", "I have issues at home", "Home doesn’t feel right"],
+            "responses": [
+                "Home is not just a place, it is a mindset. Take charge and create the space you want!",
+                "A strong home starts with communication and effort. Step up, take action, and make it work!",
+                "You have the power to shape your environment whether it is physical or emotional. Own it!"
+            ]
+        },
+        {
+            "tag": "friends",
+            "patterns": ["I have no friends", "My friends don’t support me", "I feel lonely in my friend circle"],
+            "responses": [
+                "Great friendships are built, not found. Invest in the right people and cut out the negativity!",
+                "Your crew should lift you up, not drag you down. Choose wisely, and do not be afraid to walk away from bad energy!",
+                "Be the kind of friend you want to have! Respect, loyalty, and honesty are what real friendships are made of!"
+            ]
+        },
+        {
+            "tag": "pressure",
+            "patterns": ["I feel pressured", "Expectations are too high", "I can’t handle the stress"],
+            "responses": [
+                "Pressure? That’s just fuel for greatness! Use it to push yourself to new heights!",
+                "Expectations mean people believe in you. Step up, take control, and prove them right!",
+                "You are in charge of your own story! Set your own pace, make your own rules, and do not let pressure break you!"
+            ]
+        },
+        {
+            "tag": "career",
+            "patterns": ["I don’t know what to do with my career", "I feel stuck at work", "How do I find my dream job?"],
+            "responses": [
+                "Your career is YOUR battlefield plan your strategy, sharpen your skills, and make bold moves!",
+                "Stuck? Change tactics! Learn, adapt, and go after what you truly want!",
+                "Success is not given, it is earned! Take charge, hustle hard, and make your career work for you!"
+            ]
+        },
+        {
+            "tag": "depression",
+            "patterns": ["I feel empty", "I have no motivation", "Life feels meaningless"],
+            "responses": [
+                "Listen up, warrior! Darkness is just the absence of light so be your own spark. One step, one action, one win at a time!",
+                "Even the strongest heroes have setbacks. But do they stay down? No! They get back up and fight. And so will you!",
+                "Feeling stuck? Shake things up! Change the scenery, take action, and remind yourself that every legend starts with a struggle!"
+            ]
+        },
+        {
+            "tag": "loneliness",
+            "patterns": ["I feel alone", "No one understands me", "I have no one"],
+            "responses": [
+                "You are never alone when you are with me! I am right here, and so are countless others who care about you. Keep reaching out!",
+                "A captain never sails alone your crew is out there, waiting to connect. Keep your head high and keep looking!",
+                "Being alone does not mean being lost. This is your time to grow stronger, and soon, you will find the right people who match your energy!"
+            ]
+        },
+        {
+            "tag": "relationships",
+            "patterns": ["How do I fix my relationship?", "I have relationship problems", "Love is difficult"],
+            "responses": [
+                "Relationships are like a great voyage communication and trust keep the ship steady. Be honest, be strong, and work as a team!",
+                "Love is no t about never having problems, it is about tackling them together. Keep pushing forward and listen with an open heart!",
+                "If it matters, fight for it! Every bond needs effort, honesty, and patience. Give your best and let things fall into place!"
+            ]
+        }
+    ]
+}

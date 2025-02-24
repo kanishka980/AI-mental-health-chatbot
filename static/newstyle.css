@@ -1,0 +1,92 @@
+body{
+    background-color: #f1dcbf;
+    height: 100vh;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.heading{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2%;
+    font-weight: bold;
+    text-transform: capitalize;
+    animation: glow-text 1.5s infinite alternate;
+}
+@keyframes glow-text {
+    0% { text-shadow: 0 0 50px #f49992; }
+    100% { text-shadow: 0 0 20px #ed7556; }
+}
+.line{
+    font-size: 2rem;
+    font-family: Garamond;
+    text-align: center;
+    color:  #c13813;
+
+
+}
+.roles
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+
+
+}
+.img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+
+}
+.caption{
+    font-size: 1.5rem;
+    margin-bottom: 45px;
+    color: #e53325;
+    text-align: center;
+    align-items: center;
+
+
+}
+.about{
+    font-size: 1.3rem ;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 45px;
+    align-items: center;
+    text-align: center;
+    color: #75611b;
+}
+.sage, .captain,.mentor,.friend{
+    margin-top: 2%;
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 1.2s ease-in-out;
+
+}
+.sage:hover .img, .captain:hover .img, .mentor:hover .img, .friend:hover .img {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ffd700;
+    animation: glitter 0.5s infinite alternate;
+}
+@keyframes glitter {
+    0% { box-shadow: 0 0 10px #ffd700; }
+    100% { box-shadow: 0 0 30px #ffeb3b; }
+}
+.sage, .captain, .mentor, .friend {
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}

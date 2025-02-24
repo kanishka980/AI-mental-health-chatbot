@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with {{ bot|capitalize }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chattingstyle.css') }}">
+</head>
+<body class="{{ bot }}">
+
+    <div class="chat-container">
+        <div class="header">
+            <h1>Chat with {{ bot|capitalize }}</h1>
+            <p class="tagline">{{ get_tagline(bot) }}</p>
+        </div>
+
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">Hello! I'm {{ bot|capitalize }}. How can I assist you today?</div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById("user-input").value;
+            let chatBox = document.getElementById("chat-box");
+
+            if (userInput.trim() === "") return;
+
+
+            let userMessage = `<div class="user-message">${userInput}</div>`;
+            chatBox.innerHTML += userMessage;
+
+
+            document.getElementById("user-input").value = "";
+
+
+            fetch(`/chat/{{ bot }}/message`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let botMessage = `<div class="bot-message">${data.response}</div>`;
+                chatBox.innerHTML += botMessage;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+
+</body>
+</html>

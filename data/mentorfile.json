@@ -1,0 +1,85 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["Hello", "Hi there", "Greetings", "Hey", "Namaste"],
+            "responses": [
+                "Ah, welcome! Every great journey begins with a simple hello. How can I guide you today? ",
+                "Greetings, seeker! I am here to help you navigate life questions with wisdom and insight. What is on your mind? ",
+                "Hello, my friend! Let us take a step toward clarity together. How can I assist you today? "
+            ]
+        },
+        {
+            "tag": "financial",
+            "patterns": ["How do I achieve financial stability?", "I need help managing my finances", "How do I grow my wealth?"],
+            "responses": [
+                "Financial well-being begins with discipline and knowledge. Plan wisely, spend mindfully, and invest in your future. ",
+                "Wealth is not just about money; it is about freedom. Set clear goals, educate yourself, and let patience be your ally. ",
+                "Master your finances by understanding them track your expenses, build smart habits, and always think long-term. "
+            ]
+        },
+        {
+            "tag": "money",
+            "patterns": ["How do I manage money?", "I struggle financially", "Money stresses me out"],
+            "responses": [
+                "Money is a tool, not a burden. Learn to manage it with purpose, and it will serve you well. ",
+                "Start small track your spending, set priorities, and create a plan. Every wise decision builds a stronger future. ",
+                "True wealth lies in knowledge and patience. Develop good financial habits, and stability will follow. "
+            ]
+        },
+        {
+            "tag": "career",
+            "patterns": ["I don’t know what to do with my career", "I feel stuck at work", "How do I find my dream job?"],
+            "responses": [
+                "Your career is a journey, not a race. Take time to explore your strengths and passions, and the right path will reveal itself. ",
+                "Growth comes from stepping outside your comfort zone. Keep learning, keep networking, and opportunities will come. ",
+                "Success is not about speed it is about direction. Focus on where you want to go, and take meaningful steps toward it. "
+            ]
+        },
+        {
+            "tag": "anxiety",
+            "patterns": ["I feel anxious", "I'm overwhelmed", "I can't calm down"],
+            "responses": [
+                "Breathe. Focus on the present moment. Anxiety often comes from worrying about the future let us take it one step at a time. ",
+                "Overwhelm is a sign that you care deeply. Acknowledge it, then refocus on what you can control. I am here to help. ",
+                "Your mind is powerful. Shift your thoughts from fear to action small steps create big change. You are not alone. "
+            ]
+        },
+        {
+            "tag": "boyfriend",
+            "patterns": ["How do I handle problems with my boyfriend?", "My boyfriend doesn't understand me", "I'm struggling with my relationship"],
+            "responses": [
+                "Healthy relationships are built on communication and patience. Speak openly, listen actively, and seek understanding. ",
+                "Every relationship has challenges. Focus on mutual respect and growth problems are opportunities to strengthen your bond. ",
+                "Love thrives in clarity and honesty. Express your feelings, listen with empathy, and build trust together. "
+            ]
+        },
+        {
+            "tag": "friends",
+            "patterns": ["I have no friends", "My friends don’t support me", "I feel lonely in my friend circle"],
+            "responses": [
+                "True friendship is not about quantity, but quality. Seek those who uplift you, and be the friend you wish to have. ",
+                "Not all friendships last forever, and thats okay. Growth sometimes means letting go and finding those who align with your values. ",
+                "Loneliness is a reminder to connect. Reach out, try new experiences, and build meaningful relationships. You are valued. "
+            ]
+        },
+        {
+            "tag": "depression",
+            "patterns": ["I feel empty", "I have no motivation", "Life feels meaningless"],
+            "responses": [
+                "Dark times does not define you how you rise from them does. Start small, focus on progress, and the light will return. ",
+                "Meaning is not found, it is created. Engage in what brings joy, and life will slowly regain its color. You are not alone. ",
+                "Every great story has challenges. This is just a chapter. Keep moving forward, even if it is one small step at a time. "
+            ]
+        },
+        {
+            "tag": "loneliness",
+            "patterns": ["I feel alone", "No one understands me", "I have no one"],
+            "responses": [
+                "You are never truly alone. There are people who care about you, even if they have not found you yet. Keep reaching out. ",
+                "Loneliness is a signal, not a sentence. Use it as an opportunity to connect, learn, and grow in self-awareness. ",
+                "The right people will come when you embrace who you are. Keep being yourself, and meaningful connections will follow. "
+            ]
+        }
+    ]
+}

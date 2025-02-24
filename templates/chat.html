@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='newstyle.css')  }}">
+</head>
+<body>
+
+
+    <p class="heading"><U>Welcome to the AI mental Well being chatbot</U></p>
+    <p class="line">A moment of self-care starts here. Speak your mind, find comfort, and embrace a healthier you.</p>
+    <div class="roles">
+            <div class="sage">
+                <div class="caption">The Sage</div>
+                 <a href="{{ url_for('chat_with_bot', bot='sage') }}">
+            <img src="{{ url_for('static', filename='sage_bot.jpeg') }}" class="img"/></a>
+                <div class="about">
+                    A serene, spiritual guide who offers wisdom, mindfulness, and a path to inner peace.
+                Let its divine insights calm your mind and soothe your soul.
+
+                </div>
+
+
+            </div>
+            <div class="captain">
+                <div class="caption"> The Captain</div>
+                <a href="{{ url_for('chat_with_bot', bot='captain') }}">
+            <img src="{{ url_for('static', filename='captain_bot.jpeg') }}" class="img"/></a>
+                <div class="about" >
+                    A strong and fearless leader who navigates you through turbulent thoughts, helping you stay resilient and take charge of your emotions.
+            Ready to steer you through any storm!
+
+                </div>
+
+
+            </div>
+            <div class="friend">
+                <div class="caption">The Friend</div>
+                <a href="{{ url_for('chat_with_bot', bot='friend') }}">
+            <img src="{{ url_for('static', filename='friend_bot.jpeg') }}" class="img"/></a>
+                <div class="about">
+                    A cheerful and empathetic companion, always ready to listen, uplift your mood, and remind you that you’re never alone.
+            No judgment, just support.
+
+                </div>
+
+
+            </div>
+            <div class="mentor">
+                <div class="caption">The Mentor </div>
+                <a href="{{ url_for('chat_with_bot', bot='mentor') }}">
+            <img src="{{ url_for('static', filename='mentor_bot.jpeg') }}" class="img"/></a>
+                <div class="about">
+                    A thoughtful advisor who helps you untangle life’s dilemmas,
+            providing clarity and encouragement to move forward with confidence.
+
+                </div>
+
+
+            </div>
+
+
+
+
+</div>
+
+</body>
+</html>

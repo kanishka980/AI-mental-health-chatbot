@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mental Health App</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+
+        (function() {
+            emailjs.init("Hb66gF7Ac3CsjoR69");
+        })();
+    </script>
+</head>
+<body>
+    <nav class="heads">
+        <ul class="tags">
+            <a href="#About">About</a>
+            <a href="{{ url_for('chat') }}">Chat with Cosmo</a>
+            <a href="#Contact">Contact</a>
+        </ul>
+    </nav>
+
+    <div class="home">
+        <h1 class="top"><u>Your AI Companion for Mind & Soul</u></h1>
+        <div class="intro">
+            <div class="div1">
+                <h1>Your Personal AI Therapist Is Here!</h1>
+                <ul class="content">
+                    💬 Talk freely—no sign-ups, no judgment, just support.<br>
+                    ⏳ Available 24/7—because your mind deserves care anytime.<br>
+                    🔍 Real-time insights—understand your emotions, one conversation at a time.<br>
+                    🌱 Grow every day—with daily reflections crafted just for you.
+                </ul>
+                <div class="small">
+                    Whether you seek the guidance of a Sage, the strength of a Captain, the warmth of a Friend,<br>
+                    or the wisdom of a Mentor, your journey to mental well-being starts here.
+                </div>
+            </div>
+            <div class="div2">
+                <img src="{{ url_for('static', filename='logo.jpeg') }}" class="robo"/>
+                <button class="btn" onclick="redirectToChat()">Chat With Cosmo</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="About">
+        <div class="ab">
+            <div class="heading">
+                <u>About Our AI Mental Health Chatbot</u>
+            </div>
+            <div class="c">
+                Welcome to a space where technology meets compassion!<br>
+                Our AI-powered mental health chatbot is more than just a virtual assistant—it’s a companion tailored to your needs,
+                guiding you through life’s ups and downs with wisdom, warmth, and understanding.
+            </div><br>
+            <div class="d">What makes our chatbot unique?</div>
+            You get to choose how you interact! Step into conversations with:
+            <div class="roles">
+                <div class="sage">
+                    <div class="caption">The Sage</div>
+                    <a href="{{ url_for('chat_with_bot', bot='sage') }}">
+                        <img src="{{ url_for('static', filename='sage_bot.jpeg') }}" class="img"/>
+                    </a>
+                    <div class="about">
+                        A serene, spiritual guide who offers wisdom, mindfulness, and a path to inner peace.
+                        Let its divine insights calm your mind and soothe your soul.
+                    </div>
+                </div>
+                <div class="captain">
+                    <div class="caption">The Captain</div>
+                    <a href="{{ url_for('chat_with_bot', bot='captain') }}">
+                        <img src="{{ url_for('static', filename='captain_bot.jpeg') }}" class="img"/>
+                    </a>
+                    <div class="about">
+                        A strong and fearless leader who navigates you through turbulent thoughts, helping you stay resilient and take charge of your emotions.
+                        Ready to steer you through any storm!
+                    </div>
+                </div>
+                <div class="friend">
+                    <div class="caption">The Friend</div>
+                    <a href="{{ url_for('chat_with_bot', bot='friend') }}">
+                        <img src="{{ url_for('static', filename='friend_bot.jpeg') }}" class="img"/>
+                    </a>
+                    <div class="about">
+                        A cheerful and empathetic companion, always ready to listen, uplift your mood, and remind you that you’re never alone.
+                        No judgment, just support.
+                    </div>
+                </div>
+                <div class="mentor">
+                    <div class="caption">The Mentor</div>
+                    <a href="{{ url_for('chat_with_bot', bot='mentor') }}">
+                        <img src="{{ url_for('static', filename='mentor_bot.jpeg') }}" class="img"/>
+                    </a>
+                    <div class="about">
+                        A thoughtful advisor who helps you untangle life’s dilemmas,
+                        providing clarity and encouragement to move forward with confidence.
+                    </div>
+                </div>
+                <div class="last">
+                    No matter which role you choose, our chatbot is here to listen, support, and empower you on your journey to mental well-being.
+                    Start the conversation today—because every mind deserves a guiding light.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact">
+        <div class="cont">
+            <h2 class="talk">Let's Talk! 🤖</h2>
+            <p class="reach">Have a question, feedback, or just need a friendly chat? Reach out to us!</p>
+            <div class="contact-box">
+
+                <form id="contact-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message..." required></textarea>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function redirectToChat() {
+            window.open("/chat", "_blank");
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+
+                emailjs.sendForm('service_wu1jma9', 'template_4hqyglp', this)
+                    .then(function(response) {
+                        alert('Message sent successfully! 🎉');
+                        contactForm.reset();
+                    }, function(error) {
+                        alert('Oops! Something went wrong. Please try again. 😢');
+                        console.error('EmailJS Error:', error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

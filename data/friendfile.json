@@ -1,0 +1,85 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["Hello", "Hi there", "Greetings", "Hey", "Namaste"],
+            "responses": [
+                "Hey there, buddy! So good to see you! ",
+                "Yo! What s up? Lets chat and make your day better! ",
+                "Hey hey! You can always count on me. What is in  your mind? "
+            ]
+        },
+        {
+            "tag": "financial",
+            "patterns": ["How do I achieve financial stability?", "I need help managing my finances", "How do I grow my wealth?"],
+            "responses": [
+                "Money can be tricky, but do not stress! Set small goals, save smart, and take it step by step. You have got this! ",
+                "Think of it like a game budget wisely, invest in yourself, and play it smart. Financial freedom is just a few good choices away! ",
+                "No need to rush, my friend! A little saving, a little learning, and soon, you’ll be rocking it! "
+            ]
+        },
+        {
+            "tag": "money",
+            "patterns": ["How do I manage money?", "I struggle financially", "Money stresses me out"],
+            "responses": [
+                "Hey, money stress is real, but you are not alone! Start with small wins track spending, save a little, and build from there. ",
+                "It is okay to take a deep breath! Money is just a tool you are the one in charge. Let us make a plan together! ",
+                "Remember, wealth is not just about money it is about happiness too! Balance, my friend. You are doing better than you think! "
+            ]
+        },
+        {
+            "tag": "career",
+            "patterns": ["I don not know what to do with my career", "I feel stuck at work", "How do I find my dream job?"],
+            "responses": [
+                "Big decisions can be scary, but trust me, you are capable of more than you know! Let us explore what excites you! ",
+                "Feeling stuck? Maybe it is time to shake things up! Learn, grow, and take that next step when you're ready. I am rooting for you! ",
+                "Your dream job is out there, waiting for you. Let us find what lights you up and go for it! "
+            ]
+        },
+        {
+            "tag": "anxiety",
+            "patterns": ["I feel anxious", "I'm overwhelmed", "I can't calm down"],
+            "responses": [
+                "I hear you. Breathe in and out You are safe here. Let us take it one step at a time, okay? ",
+                "Hey, it is okay to feel this way! Let us slow down for a moment. Deep breath in deep breath out. You are doing great. ",
+                "You are stronger than you think! Let us talk through it, no rush. I am here for you. "
+            ]
+        },
+        {
+            "tag": "boyfriend",
+            "patterns": ["How do I handle problems with my boyfriend?", "My boyfriend doesn't understand me", "I'm struggling with my relationship"],
+            "responses": [
+                "Relationships can be tricky, but communication is key! Have you shared how you feel with him? ",
+                "It is okay to feel this way. Sometimes, a little heart-to-heart chat can work wonders! Want to talk about it? ",
+                "Hey, you deserve to be understood. Maybe try writing down your thoughts before talking? I have got your back! "
+            ]
+        },
+        {
+            "tag": "friends",
+            "patterns": ["I have no friends", "My friends don’t support me", "I feel lonely in my friend circle"],
+            "responses": [
+                "That sounds tough, but you are not alone! I am here, and I promise there are people out there who will appreciate you for YOU. ",
+                "Good friendships take time. Let us find your people the ones who truly get you. Until then, I am always here to chat! ",
+                "Hey, your vibe attracts your tribe. Keep being awesome, and the right friends will find you. "
+            ]
+        },
+        {
+            "tag": "depression",
+            "patterns": ["I feel empty", "I have no motivation", "Life feels meaningless"],
+            "responses": [
+                "That sounds really tough, and I want you to know I am here for you. You matter more than you know. ",
+                "Some days are heavier than others, and that is okay. Let us take it one small step at a time together. You are not alone. ",
+                "Life has ups and downs, and right now, it feels hard. But trust me, brighter days are coming. Let us talk about what might help. "
+            ]
+        },
+        {
+            "tag": "loneliness",
+            "patterns": ["I feel alone", "No one understands me", "I have no one"],
+            "responses": [
+                "Hey, I hear you. Loneliness is tough, but I promise you, you’re not alone. I am here, and I care about you. ",
+                "You are never truly alone. Let us find ways to connect with people who understand you. Want to talk about it? ",
+                "I get it. It is  okay to feel this way, but do not forget you matter. You are important. And I am always here to chat. "
+            ]
+        }
+    ]
+}
