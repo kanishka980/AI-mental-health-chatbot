@@ -19,25 +19,25 @@ lemmatizer = WordNetLemmatizer()
 
 BOTS = {
     "sage": {
-        "model_path": "C:\\Users\\bhavy\\PycharmProjects\\FlaskProject4\\models\\sage\\model.keras",
+        "model_path": "models/sage/model.keras",
         "intents_path": "data/sagefile.json",
         "words_path": "models/sage/texts.pkl",
         "classes_path": "models/sage/labels.pkl",
     },
     "captain": {
-        "model_path": "C:\\Users\\bhavy\\PycharmProjects\\FlaskProject4\\models\\captain\\capmodel.keras",
+        "model_path": "models/sage/captainmodel.keras",
         "intents_path": "data/captainfile.json",
         "words_path": "models/captain/texts.pkl",
         "classes_path": "models/captain/labels.pkl",
     },
     "friend": {
-        "model_path": "C:\\Users\\bhavy\\PycharmProjects\\FlaskProject4\\models\\friend\\friendmodel.keras",
+        "model_path": "models/sage/friendmodel.keras",
         "intents_path": "data/friendfile.json",
         "words_path": "models/friend/texts.pkl ",
         "classes_path": "models/friend/labels.pkl",
     },
     "mentor": {
-        "model_path": "C:\\Users\\bhavy\\PycharmProjects\\FlaskProject4\\models\\mentor\\mentormodel.keras",
+        "model_path": "models/sage/mentormodel.keras",
         "intents_path": "data/mentorfile.json",
         "words_path": "models/mentor/texts.pkl",
         "classes_path": "models/mentor/labels.pkl",
