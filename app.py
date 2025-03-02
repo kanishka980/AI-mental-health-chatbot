@@ -8,6 +8,7 @@ from nltk.stem import WordNetLemmatizer
 import pickle
 import json
 import random
+import os
 
 app = Flask(__name__)
 
@@ -17,54 +18,65 @@ nltk.download('punkt')
 lemmatizer = WordNetLemmatizer()
 
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 BOTS = {
     "sage": {
-        "model_path": "models/sage/model.keras",
-        "intents_path": "data/sagefile.json",
-        "words_path": "models/sage/texts.pkl",
-        "classes_path": "models/sage/labels.pkl",
+        "model_path": os.path.join(BASE_DIR, "models", "sage", "model.keras"),
+        "intents_path": os.path.join(BASE_DIR, "data", "sagefile.json"),
+        "words_path": os.path.join(BASE_DIR, "models", "sage", "texts.pkl"),
+        "classes_path": os.path.join(BASE_DIR, "models", "sage", "labels.pkl"),
     },
     "captain": {
-        "model_path": "models/sage/captainmodel.keras",
-        "intents_path": "data/captainfile.json",
-        "words_path": "models/captain/texts.pkl",
-        "classes_path": "models/captain/labels.pkl",
+        "model_path": os.path.join(BASE_DIR, "models", "captain", "capmodel.keras"),
+        "intents_path": os.path.join(BASE_DIR, "data", "captainfile.json"),
+        "words_path": os.path.join(BASE_DIR, "models", "captain", "texts.pkl"),
+        "classes_path": os.path.join(BASE_DIR, "models", "captain", "labels.pkl"),
     },
     "friend": {
-        "model_path": "models/sage/friendmodel.keras",
-        "intents_path": "data/friendfile.json",
-        "words_path": "models/friend/texts.pkl ",
-        "classes_path": "models/friend/labels.pkl",
+        "model_path": os.path.join(BASE_DIR, "models", "friend", "friendmodel.keras"),
+        "intents_path": os.path.join(BASE_DIR, "data", "friendfile.json"),
+        "words_path": os.path.join(BASE_DIR, "models", "friend", "texts.pkl"),
+        "classes_path": os.path.join(BASE_DIR, "models", "friend", "labels.pkl"),
     },
     "mentor": {
-        "model_path": "models/sage/mentormodel.keras",
-        "intents_path": "data/mentorfile.json",
-        "words_path": "models/mentor/texts.pkl",
-        "classes_path": "models/mentor/labels.pkl",
+        "model_path": os.path.join(BASE_DIR, "models", "mentor", "mentormodel.keras"),
+        "intents_path": os.path.join(BASE_DIR, "data", "mentorfile.json"),
+        "words_path": os.path.join(BASE_DIR, "models", "mentor", "texts.pkl"),
+        "classes_path": os.path.join(BASE_DIR, "models", "mentor", "labels.pkl"),
     },
 }
 
 
 bots_data = {}
+
 for bot_name, bot_config in BOTS.items():
+    try:
 
-    with open(bot_config["intents_path"]) as file:
-        intents = json.load(file)
-
-
-    words = pickle.load(open(bot_config["words_path"], "rb"))
-    classes = pickle.load(open(bot_config["classes_path"], "rb"))
+        with open(bot_config["intents_path"], "r", encoding="utf-8") as file:
+            intents = json.load(file)
 
 
-    model = tf.keras.models.load_model(bot_config["model_path"])
+        with open(bot_config["words_path"], "rb") as f:
+            words = pickle.load(f)
+
+        with open(bot_config["classes_path"], "rb") as f:
+            classes = pickle.load(f)
+
+        # Load model
+        model = tf.keras.models.load_model(bot_config["model_path"])
 
 
-    bots_data[bot_name] = {
-        "intents": intents,
-        "words": words,
-        "classes": classes,
-        "model": model,
-    }
+        bots_data[bot_name] = {
+            "intents": intents,
+            "words": words,
+            "classes": classes,
+            "model": model,
+        }
+
+    except Exception as e:
+        print(f"Error loading bot '{bot_name}': {e}")
+
 
 
 def clean_up_sentence(sentence):
@@ -175,5 +187,5 @@ def chat_message(bot):
         print("Error:", str(e))
         return jsonify({"response": "An error occurred on the server."}), 500
 
-if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000, debug=False)
